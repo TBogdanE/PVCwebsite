@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    background-color: rgb(200, 200, 200);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0.5em 2em; 
+    align-items: center;
+}
+
+
+#logocontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#logo {
+    width: 7em;
+    height: 7em;
+}
+
+#title {
+    display: block;
+    font-size: 1.5em;
+    color: rgb(58, 58, 58);
+    font-family: 'Gantari', sans-serif;
+}
+
+#menucontainer {
+    display: flex;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 2em;
+}
+
+.menubtn {
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 0.5em;
+    border-color: transparent;
+    color: rgb(58, 58, 58);
+    font-family: 'Gantari', sans-serif;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+.menubtn:hover {
+    background-color: rgb(254, 254, 254);
+}
+
+.activemenubtn {
+    color: rgb(21, 46, 46);
+}
+
+#firstsection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#txt1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    order: 1;
+    width: 50%;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 3em;
+    text-align: left;
+    color: rgb(58, 58, 58);
+    padding-left: 2em;
+}
+
+#img1sct {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    order: 2;
+    width: 50%;
+}
+
+#img1:hover {
+    transform: translateY(-1px);
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+
+#img1 {
+    width: 100%;
+    height: auto;
+    border-radius: 3% 0 0 3%;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+}
