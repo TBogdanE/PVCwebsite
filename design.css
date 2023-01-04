@@ -110,6 +110,34 @@ nav {
     transition: 0.2s;
 }
 
+.numscttitle {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.3em;
+    color: rgb(58, 58, 58);
+}
+
+.numsctnum {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2em;
+    color: rgb(58, 58, 58);
+}
+
+#numsct {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5em;
+}
+
+#numsctprj {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
 #worksection {
     display: flex;
     flex-direction: column;
@@ -184,3 +212,12 @@ nav {
     width: 6em;
     box-shadow: 0px 0px 51px -7px rgba(56,56,56,0.69);
   }
+
+  .reveal{
+  opacity: 0;
+}
+
+.reveal.active{
+      transition: 0.5s ease;
+    opacity: 1;
+}
