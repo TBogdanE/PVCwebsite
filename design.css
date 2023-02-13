@@ -1,0 +1,363 @@
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none; 
+  }
+
+body {
+    margin: 0;
+    background: linear-gradient(rgba(200,200,200,.85), rgba(210,210,210,.85)), url("https://www.transparenttextures.com/patterns/dark-mosaic.png");;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0.5em 2em; 
+    align-items: center;
+}
+
+
+#logocontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#logo {
+    width: 7em;
+    height: 7em;
+}
+
+#title {
+    display: block;
+    font-size: 1.7em;
+    color: rgb(58, 58, 58);
+    font-family: 'Gantari', sans-serif;
+}
+
+#menucontainer {
+    display: flex;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 2em;
+}
+
+.menubtn {
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 0.5em;
+    border-color: transparent;
+    border-width: 0.15em;
+    color: rgb(58, 58, 58);
+    font-family: 'Gantari', sans-serif;
+    font-size: 1.1em;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.menubtn:hover {
+    border-bottom-color: rgb(58, 58, 58);
+}
+
+.activemenubtn {
+    background-color: rgb(58, 58, 58);
+    color: rgb(200, 200, 200);
+}
+
+#firstsection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    order: 1;
+}
+
+#txt1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    order: 1;
+    width: 50%;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 3em;
+    text-align: left;
+    color: rgb(58, 58, 58);
+    padding-left: 2em;
+}
+
+#img1sct {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    order: 2;
+    width: 50%;
+}
+
+#img1:hover {
+    transform: translateY(-1px);
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+
+#img1 {
+    width: 100%;
+    height: auto;
+    border-radius: 3% 0 0 3%;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+}
+
+.numscttitle {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.3em;
+    color: rgb(58, 58, 58);
+}
+
+.numsctnum {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2em;
+    color: rgb(58, 58, 58);
+}
+
+#numsct {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5em;
+    order: 2;
+}
+
+#numsctprj {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#worksct {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    order: 3;
+}
+
+.scttitle {
+    display: block;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2.5em;
+    color: rgb(58, 58, 58);
+    padding: 0.5em;
+}
+
+#workcardsct {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    order: 2;
+    padding: 1em 2em 0 2em;
+    font-family: 'Bitter', serif;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: rgb(58, 58, 58);
+}
+
+.workcardimg {
+    height: 7em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: 0.7em 0.7em 0 0;
+    box-shadow: 0px 0px 51px -7px rgba(56,56,56,0.69);
+}
+
+.workcardcontent {
+    align-items: center;
+    justify-content: center;
+    background: hsla(0, 0%, 23%, 1);
+    background: linear-gradient(90deg, hsla(0, 0%, 23%, 1) 0%, hsla(0, 0%, 35%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(0, 0%, 23%, 1) 0%, hsla(0, 0%, 35%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(0, 0%, 23%, 1) 0%, hsla(0, 0%, 35%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#3a3a3a", endColorstr="#5a5a5a", GradientType=1 );
+    color: rgb(200, 200, 200);
+    padding: 6em 1em 6em 1em;
+    text-align: center;
+    border-radius: 0 0 0.7em 0.7em;
+    box-shadow: 0px 0px 51px -7px rgba(56,56,56,0.69);
+    width: 10em;
+    height: 4em;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.1em;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    bottom: -3em;
+    transform: translateX(-50%);
+    border-radius: 5em;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(172, 172, 172);
+    height: 6em;
+    width: 6em;
+    box-shadow: 0px 0px 51px -7px rgba(56,56,56,0.69);
+  }
+
+  .reveal{
+    opacity: 0;
+}
+
+.reveal.active{
+    transition: 0.5s ease;
+    opacity: 1;
+}
+
+#productsct {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    order: 4;
+    padding: 0.5em 10em 1em 10em;
+}
+
+.productsctcontent {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 1em;
+}
+
+.productbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 1em;
+    height: 12em;
+    background-color: rgb(200, 200, 200);
+    color: rgb(58, 58, 58);
+    border-radius: 0.7em;
+    margin: 1em;
+}
+
+.productboximg {
+    display: block;
+    width: 22em;
+    border-radius: 0.5em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-wrap: nowrap;
+}
+
+.productboxtxt {
+    display: flex;
+    flex-direction: column;
+    width: 50em;
+}
+
+.productboxtxttitle {
+    display: block;
+    order: 1;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.2em;
+}
+
+.productboxtxtcontent {
+    display: block;
+    order: 2;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1em;
+}
+
+#gallerysct {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 5;
+}
+
+/*#galleryscttitle {
+    display: block;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2.5em;
+    color: rgb(58, 58, 58);
+    order: 1;
+}*/
+
+#gallerysctcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    order: 2;
+    padding: 1em;
+}
+
+.galleryimgbox {
+    padding: 0 1em 0 1em ;
+}
+
+.galleryimg {
+    width: 18em;
+    box-shadow: 0px 0px 51px -7px rgba(56,56,56,0.69);
+    border-radius: 0.3em;
+}
+
+#gallerysctbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gallerybtn {
+    font-size: 1em;
+    color: rgb(58,58,58);
+    background-color: transparent;
+    padding: 1.5em;
+    font-family: 'Roboto Mono', monospace;
+    border: 0;
+    transition: 0.1s;
+}
+
+#gallerybtn:hover {
+transform: scale(102%);
+cursor: pointer;
+}
+
+
+footer {
+    text-align: center;
+    background-color: rgb(58, 58, 58);
+    color: rgb(200, 200, 200);
+    font-size: 0.7em;
+    padding: 0.5em;
+}
