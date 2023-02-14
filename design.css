@@ -30,15 +30,7 @@ nav {
 }
 
 #logo {
-    width: 7em;
-    height: 7em;
-}
-
-#title {
-    display: block;
-    font-size: 1.7em;
-    color: rgb(58, 58, 58);
-    font-family: 'Gantari', sans-serif;
+    width: 11em;
 }
 
 #menucontainer {
