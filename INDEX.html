@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Tamplarie Relax</title>
     <link rel="stylesheet" href="design.css">
     <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gantari&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -32,12 +37,12 @@
         </div>
     </nav>
 
-    <div id="firstsection">
-        <div id="txt1">
+    <div id="firstsct">
+        <div id="firstscttxt">
             Esti in cautarea tamplariei<br>pentru casa ta?
         </div>
-        <div id="img1sct">
-            <img src="imgsite/v1s.jpg" id="img1">
+        <div id="firstsctimgbox">
+            <img src="imgsite/v1s.jpg" id="firstsctimg">
         </div>
     </div>
 
@@ -113,9 +118,77 @@
 
     <div id="productsct">
         <div class="scttitle">
-            Tipuri de produse
+            Produsele noastre
         </div>
-        <div id="productsctcontent">
+        <div id="productlistsct">
+
+            <div class="productcontainer">
+                <a href="produse-ferestre.html">
+                    <div class="productcontainerimg"
+                        style="background-image: url('imgsite/product-sct-window-icon.jpg');">
+                    </div>
+                </a>
+                <div class="productcontainertitle">
+                    Ferestre
+                </div>
+            </div>
+
+            <div class="productcontainer">
+                <a href="produse-usi.html">
+                    <div class="productcontainerimg"
+                        style="background-image: url('imgsite/product-sct-door-icon.jpg');">
+                    </div>
+                </a>
+                <div class="productcontainertitle">
+                    Usi
+                </div>
+            </div>
+
+            <div class="productcontainer">
+                <a href="produse-perete-sticla.html">
+                    <div class="productcontainerimg"
+                        style="background-image: url('imgsite/product-sct-skylight-icon.jpg');">
+                    </div>
+                </a>
+                <div class="productcontainertitle">
+                    Geamuri retractabile
+                </div>
+            </div>
+
+            <div class="productcontainer">
+                <a href="produse-rulouri.html">
+                    <div class="productcontainerimg"
+                        style="background-image: url('imgsite/product-sct-windowroller-icon.jpg');">
+                    </div>
+                </a>
+                <div class="productcontainertitle">
+                    Rulouri
+                </div>
+            </div>
+
+            <div class="productcontainer">
+                <a href="produse-usa-garaj.html">
+                    <div class="productcontainerimg"
+                        style="background-image: url('imgsite/product-sct-garagedoor-icon.jpg');">
+                    </div>
+                </a>
+                <div class="productcontainertitle">
+                    Usi de garaj
+                </div>
+            </div>
+
+            <div class="productcontainer">
+                <a href="produse-porti.html">
+                    <div class="productcontainerimg"
+                        style="background-image: url('imgsite/product-sct-gate-icon.jpg');">
+                    </div>
+                </a>
+                <div class="productcontainertitle">
+                    Porti
+                </div>
+            </div>
+        </div>
+        <!-- <div id="productsctcontent">
             <div class="productbox">
                 <div class="productboximg" style="background-image: url('imgsite/workcardmeasure.jpeg');">
                 </div>
@@ -176,11 +249,11 @@
                     </div>
                 </div>
             </div>
-        </div>
-        
+        </div>-->
+
     </div>
 
-    <div class="gallerysct">
+    <div id="gallerysct">
         <div class="scttitle">
             Galerie
         </div>
@@ -199,13 +272,20 @@
             </div>
         </div>
         <div id="gallerysctbtn">
-            <button id="gallerybtn" href="fereastra-relax-gallery.html">Vezi mai multe -></button>
+            <a href="fereastra-relax-galerie.html"><button id="gallerybtn">Vezi mai multe -></button></a>
         </div>
     </div>
 
-
-
+    <div id="usrreviewsct">
+        <div class="scttitle">
+            Opiniile clientilor nostrii
+        </div>
+        <div id="usrreviewscttxt">
+            "O firma care isi respecta clientii!"
+        </div>
+        <div id="usrreviewscttxtauthor">- Toma Bogdan -</div>
     </div>
+
     <footer>
         Copyright by TBE
     </footer>
