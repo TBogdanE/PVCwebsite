@@ -330,6 +330,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    order: 3;
 }
 
 #gallerybtn {
@@ -461,22 +462,172 @@ nav {
     justify-content: space-around;
     order: 1;
     font-family: 'Roboto Mono', monospace;
-    font-weight: 200;
-    font-style: italic;
     font-size: 1.8em;
     text-align: center;
     color: rgb(58, 58, 58);
     padding: 2em;
 }
 
-#p-productsct {
-
-
+.p-productscttitle {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2.5em;
+    color: white;
+    padding: 0.5em;
 }
 
+.p-productscttxt {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5em;
+    color: white;
+    padding: 1em;
+}
 
+#p-productsct {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
+#p-productsctwindowdoor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 72em;
+    background-color: transparent;
+    border-radius: 0.7em;
+}
 
+.p-sct-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.p-sct-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.p-box-25 {
+    display: block;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    width: 16em;
+    padding: 1em;
+}
+.p-box-33 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    width: 21em;
+    padding: 1em;
+}
+
+.p-box-50 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    width: 34em;
+    padding: 1em;
+}
+
+.p-box-100 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    width: 70em;
+    padding: 1em;
+}
+
+.p-productsctwindowdoor-advantage-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-productsctwindowdoor-advantage-title {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: rgb(58, 58, 58);
+    padding: 0.5em;
+}
+
+.p-productsctwindowdoor-advantage-txt {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1em;
+    color: rgb(58, 58, 58);
+    padding: 0.5em;
+}
+
+.p-productsctwindowdoor-profiletype-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    width: 20em;
+    height: 80em;
+    padding: 1em;
+    background-color: transparent;
+    border: 0.05em solid rgb(58, 58, 58);
+    border-radius: 0.7em;
+    transition: 0.4s;
+}
+
+.p-productsctwindowdoor-profiletype-box:hover {
+    background-color: rgb(255, 255, 255);
+    border: 0.05em solid rgb(0, 0, 0);
+}
+
+.p-productsctwindowdoor-profiletype-box:hover .p-productsctwindowdoor-profiletype-box-img{
+    border: 0.05em solid rgb(0, 0, 0);
+}
+
+.p-productsctwindowdoor-profiletype-box-imgbox {
+    width: 100%;
+}
+
+.p-productsctwindowdoor-profiletype-box-img {
+    width: 100%;
+    border: 0.05em solid rgb(58, 58, 58);
+    border-radius: 0.5em;
+    transition: 0.4s;
+}
+
+.p-productsctwindowdoor-profiletype-box-title {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: rgb(58, 58, 58);
+    padding: 0.5em;
+    transition: 0.4s ease-in;
+}
+
+.p-productsctwindowdoor-profiletype-box:hover .p-productsctwindowdoor-profiletype-box-title{
+    text-decoration: underline;
+}
+
+.p-productsctwindowdoor-profiletype-box-txt {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1em;
+    color: rgb(58, 58, 58);
+    padding: 0.5em;
+}
 
 /* footer *******************************************************************************/
 
