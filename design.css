@@ -109,7 +109,7 @@ nav {
     height: auto;
     border-radius: 3% 0 0 3%;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-    transition: 0.2s;
+    transition: 0.4s;
 }
 
 .numscttitle {
@@ -153,7 +153,7 @@ nav {
     display: block;
     text-align: center;
     font-family: 'Roboto Mono', monospace;
-    font-size: 2.5em;
+    font-size: 2.2em;
     color: rgb(58, 58, 58);
     padding: 0.5em;
 }
@@ -530,6 +530,16 @@ nav {
     padding: 1em;
 }
 
+.p-box-66 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    width: 50em;
+    padding: 1em;
+}
+
 .p-box-50 {
     display: flex;
     flex-direction: column;
@@ -537,6 +547,16 @@ nav {
     justify-content: center;
     align-content: center;
     width: 34em;
+    padding: 1em;
+}
+
+.p-box-75 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    width: 50em;
     padding: 1em;
 }
 
@@ -579,7 +599,7 @@ nav {
     align-items: center;
     justify-content:flex-start;
     width: 20em;
-    height: 80em;
+    height: 25em;
     padding: 1em;
     background-color: transparent;
     border: 0.05em solid rgb(58, 58, 58);
@@ -587,13 +607,45 @@ nav {
     transition: 0.4s;
 }
 
+.p-productsctwindowdoor-profiletype-box-button {
+    position: relative;
+    border: none;
+    color: rgb(58, 58, 58);
+    background-color: transparent;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.p-productsctwindowdoor-profiletype-box-button:hover {
+    color: rgb(0, 0, 0);
+}
+
+.p-productsctwindowdoor-profiletype-box-button::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .p-productsctwindowdoor-profiletype-box-button:hover::before {
+    transform: scaleX(1);
+  }
+
 .p-productsctwindowdoor-profiletype-box:hover {
     background-color: rgb(255, 255, 255);
     border: 0.05em solid rgb(0, 0, 0);
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+    scale: 1.005;
 }
 
 .p-productsctwindowdoor-profiletype-box:hover .p-productsctwindowdoor-profiletype-box-img{
     border: 0.05em solid rgb(0, 0, 0);
+    opacity: 1;
 }
 
 .p-productsctwindowdoor-profiletype-box-imgbox {
@@ -605,6 +657,7 @@ nav {
     border: 0.05em solid rgb(58, 58, 58);
     border-radius: 0.5em;
     transition: 0.4s;
+    opacity: 0.8;
 }
 
 .p-productsctwindowdoor-profiletype-box-title {
@@ -617,10 +670,6 @@ nav {
     transition: 0.4s ease-in;
 }
 
-.p-productsctwindowdoor-profiletype-box:hover .p-productsctwindowdoor-profiletype-box-title{
-    text-decoration: underline;
-}
-
 .p-productsctwindowdoor-profiletype-box-txt {
     text-align: center;
     font-family: 'Roboto Mono', monospace;
@@ -628,6 +677,84 @@ nav {
     color: rgb(58, 58, 58);
     padding: 0.5em;
 }
+
+#p-productsctwindowdoor-profiletype-popup {
+    display: none;
+    position:absolute;
+    align-items: start;
+    justify-content: center;
+    background-color: white;
+    top: 80em;
+    width: 72em;
+    height: 0em;
+    border-radius: 0.5em;
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+
+#p-productsctwindowdoor-profiletype-popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 1em;
+}
+
+#p-productsctwindowdoor-profiletype-popup-exitbtn {
+    color: rgb(56, 56, 56);
+    background-color: transparent;
+    border: 0;
+    font-size: 1.2em;
+    border-radius: 0.2em;
+    transition: 0.3s;
+}
+
+#p-productsctwindowdoor-profiletype-popup-exitbtn:hover {
+    color: rgba(58, 58, 58);
+    background-color: rgb(200, 200, 200);
+    border: 0;
+    font-size: 1.2em;
+}
+
+.p-productsctwindowdoor-profiletype-popup-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20em;
+    height: 20em;
+    background-size: cover;
+}
+
+.p-productsctwindowdoor-profiletype-popup-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.9em;
+    color: rgb(58, 58, 58);
+}
+
+.p-productsctwindowdoor-profiletype-popup-txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.2em;
+    color: rgb(58, 58, 58);
+}
+
+.p-productsctwindowdoor-profiletype-popup-specs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 0 1em 0;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.3em;
+    color: rgb(58, 58, 58);
+}
+
+.p-productsctwindowdoor-profiletype-popup-gallery {
+
+}
+
 
 /* footer *******************************************************************************/
 
