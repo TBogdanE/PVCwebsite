@@ -1,3 +1,11 @@
+:root {
+    --color-1: #186cb8;
+    --color-2: #2a9a9f;
+    --color-3: #f98d00;
+    --color-4: #e83611;
+    --color-5: #f1b211;
+}
+
 html {
     scroll-behavior: smooth;
     scrollbar-width: none;
@@ -9,9 +17,12 @@ body::-webkit-scrollbar {
 }
 
 body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     margin: 0;
     background: linear-gradient(rgba(200, 200, 200, .85), rgba(210, 210, 210, .85)), url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
-    ;
 }
 
 nav {
@@ -21,6 +32,7 @@ nav {
     justify-content: space-between;
     padding: 0.5em 2em;
     align-items: center;
+    width: 95%;
 }
 
 
@@ -33,6 +45,7 @@ nav {
 #logo {
     display: block;
     width: 11em;
+    opacity: 0.7;
 }
 
 #menucontainer {
@@ -97,11 +110,7 @@ nav {
     align-items: center;
     order: 2;
     width: 50%;
-}
-
-#firstsctimgbox:hover {
-    transform: translateY(-1px);
-    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+    transition: 0.4s;
 }
 
 #firstsctimg {
@@ -110,6 +119,11 @@ nav {
     border-radius: 3% 0 0 3%;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
     transition: 0.4s;
+}
+
+#firstsctimg:hover {
+    transform: translateY(-1px);
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
 }
 
 .numscttitle {
@@ -147,6 +161,7 @@ nav {
     justify-content: center;
     padding: 1em;
     order: 3;
+    width: 90%;
 }
 
 .scttitle {
@@ -156,6 +171,22 @@ nav {
     font-size: 2.2em;
     color: rgb(58, 58, 58);
     padding: 0.5em;
+}
+
+.scttxt-light {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5em;
+    color: rgb(200, 200, 200);
+    padding: 1em;
+}
+
+.scttxt-dark {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5em;
+    color: rgb(58, 58, 58);
+    padding: 1em;
 }
 
 #workcardsct {
@@ -222,6 +253,7 @@ nav {
 
 .reveal {
     opacity: 0;
+    width: 80%;
 }
 
 .reveal.active {
@@ -289,64 +321,128 @@ nav {
     font-size: 1em;
 }
 
-#gallerysct {
+.gallerysct {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    order: 5;
-}
-
-/*#galleryscttitle {
-    display: block;
-    text-align: center;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 2.5em;
-    color: rgb(58, 58, 58);
-    order: 1;
-}*/
-
-#gallerysctcontainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
-    order: 2;
-    padding: 1em;
-}
-
-.galleryimgbox {
-    padding: 0 1em 0 1em;
-}
-
-.galleryimg {
-    width: 18em;
-    box-shadow: 0px 0px 51px -7px rgba(56, 56, 56, 0.69);
+    order: 5;
     border-radius: 0.3em;
 }
 
-#gallerysctbtn {
+.gallerysctcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+}
+
+.gallerybox {
+    width: 16em;
+    height: 10em;
+    box-shadow: 0px 0px 51px -7px rgba(56, 56, 56, 0.50);
+    border-radius: 0.3em;
+    background-size: cover;
+    transition: 0.4s;
+    margin: 0.5em;
+    cursor: pointer;
+}
+
+.gallerybox-border {
+    border: 0.12em solid rgb(58, 58, 58);
+}
+
+.gallerybox:hover {
+    box-shadow: 0px 10px 40px 2px rgba(56, 56, 56, 0.55);
+}
+
+.gallerybtnsct {
     display: flex;
     justify-content: center;
     align-items: center;
     order: 3;
+    border: 0.05em solid rgb(58, 58, 58);
+    border-radius: 0.3em;
+    height: 2em;
+    transition: 0.2;
 }
 
-#gallerybtn {
+.gallerybtn {
     font-size: 1em;
     color: rgb(58, 58, 58);
     background-color: transparent;
     padding: 1.5em;
     font-family: 'Roboto Mono', monospace;
     border: 0;
-    transition: 0.1s;
-
+    transition: 0.4s ease-in-out;
 }
 
-#gallerybtn:hover {
-    transform: scale(102%);
-    cursor: pointer;
+.gallerybtnsct:hover {
+    background-color: rgb(58, 58, 58);
+}
+
+.gallerybtnsct:hover .gallerybtn {
+    color: white;
+}
+
+.gallery-popup {
+    display: none;
+    flex-flow: column;
+    position: absolute;
+    align-items: center;
+    background-color: white;
+    top: 240em;
+    width: 72em;
+    border-radius: 0.5em;
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+
+#gallery-popup-header {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 0;
+    width: 100%;
+}
+
+#gallery-popup-exitbtn {
+    color: rgb(56, 56, 56);
+    background-color: transparent;
+    border: 0;
+    font-size: 1.2em;
+    border-radius: 0.2em;
+    padding: 0.1em;
+    transition: 0.3s;
+}
+
+#gallery-popup-exitbtn:hover {
+    color: rgba(58, 58, 58);
+    background-color: rgb(200, 200, 200);
+    border: 0;
+    font-size: 1.2em;
+}
+
+#gallery-popup-imgbox {
+    width: 65em;
+    height: 30em;
+    background-color: grey;
+}
+
+#gallery-popup-nextbtn {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    padding: 1em;
+    background-color: red;
+}
+
+#gallery-popup-previousbtn {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    padding: 1em;
+    background-color: red;
 }
 
 #usrreviewsct {
@@ -355,6 +451,7 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 1em;
+    order: 20;
 }
 
 #usrreviewscttxt {
@@ -371,7 +468,7 @@ nav {
 
 /******************************************************************************/
 
-.hover-underline-animation {
+/**.hover-underline-animation {
     display: inline-block;
     position: relative;
     color: #0087ca;
@@ -394,7 +491,7 @@ nav {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
-
+**/
 #productlistsct {
     display: flex;
     flex-direction: row;
@@ -456,50 +553,9 @@ nav {
 }
 
 /* produse *******************************************************************************/
-#p-varietyscttitle {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    order: 1;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 1.8em;
-    text-align: center;
-    color: rgb(58, 58, 58);
-    padding: 2em;
-}
 
-.p-productscttitle {
-    text-align: center;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 2.5em;
-    color: white;
-    padding: 0.5em;
-}
+/* p-window *******************************************************************************/
 
-.p-productscttxt {
-    text-align: center;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 1.5em;
-    color: white;
-    padding: 1em;
-}
-
-#p-productsct {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#p-productsctwindowdoor {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 72em;
-    background-color: transparent;
-    border-radius: 0.7em;
-}
 
 .p-sct-row {
     display: flex;
@@ -520,6 +576,7 @@ nav {
     width: 16em;
     padding: 1em;
 }
+
 .p-box-33 {
     display: flex;
     flex-direction: column;
@@ -563,20 +620,73 @@ nav {
 .p-box-100 {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     width: 70em;
     padding: 1em;
 }
 
-.p-productsctwindowdoor-advantage-logo {
+#p-varietyscttitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    order: 1;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.8em;
+    text-align: center;
+    color: rgb(58, 58, 58);
+    padding: 2em;
+}
+
+.p-productscttitle {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2.5em;
+    color: white;
+    padding: 0.5em;
+}
+
+.p-productscttxt {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5em;
+    color: white;
+    padding: 1em;
+}
+
+#p-productsct {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    order: 2;
+}
+
+#p-productsctwindowdoor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 72em;
+    background-color: transparent;
+    border-radius: 0.7em;
+    order: 2;
+}
+
+#p-productsctwindowdoor-specs {
+    border: 0.05em solid rgb(58, 58, 58);
+    border-radius: 0.7em;
+}
+
+.p-productsct-advantage-logo {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0.8;
 }
 
-.p-productsctwindowdoor-advantage-title {
+.p-productsct-advantage-title {
     text-align: center;
     font-family: 'Roboto Mono', monospace;
     font-size: 1.8em;
@@ -585,7 +695,7 @@ nav {
     padding: 0.5em;
 }
 
-.p-productsctwindowdoor-advantage-txt {
+.p-productsct-advantage-txt {
     text-align: center;
     font-family: 'Roboto Mono', monospace;
     font-size: 1em;
@@ -597,9 +707,9 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:flex-start;
+    justify-content: flex-start;
     width: 20em;
-    height: 25em;
+    height: 26em;
     padding: 1em;
     background-color: transparent;
     border: 0.05em solid rgb(58, 58, 58);
@@ -610,6 +720,8 @@ nav {
 .p-productsctwindowdoor-profiletype-box-button {
     position: relative;
     border: none;
+    font-size: 1em;
+    padding: 0.5em;
     color: rgb(58, 58, 58);
     background-color: transparent;
     font-family: 'Roboto Mono', monospace;
@@ -630,11 +742,11 @@ nav {
     background-color: #000;
     transform: scaleX(0);
     transition: transform 0.3s ease;
-  }
+}
 
-  .p-productsctwindowdoor-profiletype-box-button:hover::before {
+.p-productsctwindowdoor-profiletype-box-button:hover::before {
     transform: scaleX(1);
-  }
+}
 
 .p-productsctwindowdoor-profiletype-box:hover {
     background-color: rgb(255, 255, 255);
@@ -643,7 +755,7 @@ nav {
     scale: 1.005;
 }
 
-.p-productsctwindowdoor-profiletype-box:hover .p-productsctwindowdoor-profiletype-box-img{
+.p-productsctwindowdoor-profiletype-box:hover .p-productsctwindowdoor-profiletype-box-img {
     border: 0.05em solid rgb(0, 0, 0);
     opacity: 1;
 }
@@ -680,7 +792,7 @@ nav {
 
 #p-productsctwindowdoor-profiletype-popup {
     display: none;
-    position:absolute;
+    position: absolute;
     align-items: start;
     justify-content: center;
     background-color: white;
@@ -751,17 +863,257 @@ nav {
     color: rgb(58, 58, 58);
 }
 
-.p-productsctwindowdoor-profiletype-popup-gallery {
+/* .p-productsctwindowdoor-profiletype-popup-gallery {
 
+} */
+
+.p-productsctwindowdoor-profilecolor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 72em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.7em;
 }
 
+.p-productsctwindowdoor-profilecolor-left-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.p-productsctwindowdoor-profilecolor-right-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*
+.p-productsctwindowdoor-profilecolor-title-container {
+    line-height: 1;
+    display: grid;
+    min-height: calc(100vh - 16px);
+} */
+
+.p-productsctwindowdoor-profilecolor-title {
+    color: transparent;
+    font-family: sans-serif;
+    font-size: 2.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: auto;
+    text-transform: uppercase;
+    background: linear-gradient(220deg, var(--color-1) 19%,
+            transparent 19%, transparent 20%,
+            var(--color-2) 20%, var(--color-2) 39%,
+            transparent 39%, transparent 40%,
+            var(--color-3) 40%, var(--color-3) 59%,
+            transparent 59%, transparent 60%,
+            var(--color-4) 60%, var(--color-4) 79%,
+            transparent 79%, transparent 80%,
+            var(--color-5) 80%);
+    -webkit-background-clip: text;
+}
+
+.p-productsctwindowdoor-profilecolor-txt {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5em;
+    color: rgb(58, 58, 58);
+    padding: 1.5em;
+}
+
+#p-productsctwindowdoor-profilecolor-img {
+    width: 70%;
+    padding: 1em;
+}
+
+/* p-slider *******************************************************************************/
+
+
+#p-productsctslide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em 0 2em 0;
+    order: 3;
+}
+
+#p-productsctslide-presentation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+}
+
+#p-productsctslide-presentation-video {
+    order: 6;
+}
+
+#p-productsctslide-presentation-txtbox-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5em;
+    font-weight: 800;
+    color: rgb(58, 58, 58);
+    padding: 1em;
+}
+
+#p-productsctslide-presentation-txtbox-txt {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.2em;
+    color: rgb(58, 58, 58);
+    padding: 1em;
+}
+
+/* p-others *******************************************************************************/
+#p-productsctothers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 72em;
+    background-color: transparent;
+    border-radius: 0.7em;
+    order: 4;
+}
+
+.p-productsctothers-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 72em;
+    background-color: transparent;
+    border: 0.05em solid rgb(58, 58, 58);
+    border-radius: 0.7em;
+    transition: 0.4s;
+    margin: 0 0 1em 0;
+}
+
+.p-productsctothers-imgbox {
+    height: 30em;
+    background-color: red;
+    border-radius: 0.5em;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+}
+
+.p-productsctothers-imgbox:hover {
+    transform: translateY(-1px);
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+}
+
+.p-productsctothers-txtbox {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-productsctothers-txtbox-title {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5em;
+    font-weight: 800;
+    color: rgb(58, 58, 58);
+    padding: 1em;
+}
+
+.p-productsctothers-txtbox-txt {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.2em;
+    color: rgb(58, 58, 58);
+    padding: 1em;
+    height: 20em;
+    word-wrap: break-word;
+}
+
+/* warranty *******************************************************************************/
+
+/* contact *******************************************************************************/
+.w-infocontainer {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+}
+
+.w-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 1em;
+}
+
+#w-txtbox {
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    flex-direction: column;
+    text-align: left;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 800;
+    color: rgb(58, 58, 58);
+    padding: 1em;
+}
+
+.w-txtbox-title {
+    text-align: left;
+    font-weight: 800;
+}
+
+.w-txtbox-txt {
+    text-align: left;
+    font-weight: 200;
+}
+
+.w-linkbtn {
+    position: relative;
+    border: none;
+    font-size: 1em;
+    color: rgb(58, 58, 58);
+    background-color: transparent;
+    font-family: 'Roboto Mono', monospace;
+    transition: 0.4s;
+}
+
+.w-linkbtn:hover {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+#w-maps {}
+
+/* about us *******************************************************************************/
 
 /* footer *******************************************************************************/
 
 footer {
+    position: relative;
+    bottom: 0%;
     text-align: center;
     background-color: rgb(58, 58, 58);
     color: rgb(200, 200, 200);
     font-size: 0.7em;
-    padding: 0.5em;
+    padding: 1em;
+    order: 100;
+    width: 100%;
 }

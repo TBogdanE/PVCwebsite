@@ -82,7 +82,7 @@ btn_700.addEventListener('click', () => {
     popup_img.style.backgroundImage = "url(imgsite/imgsite-produse/IMG/p-ramplast-700.jpg)";
     popup_title.innerHTML = "Ramplast Solid 700";
     popup_txt.innerHTML = "Profilele care folosesc acest sistem premium au o  structura formata din 7 camere, care au fost proiectate sa ofere cea mai mare protectie termala si sonora. Au un design modern, cu colturi rotunjite si dimensiuni compacte. Aceasta clasa A premium are o grosime de 80mm si este renumita pentru izolarea termica si sonora, fiind considerata cea mai de top clasa din Romania.";
-    popup_specs.innerHTML = "- Clasa A, cu pereti exteriori de 3 mm; <br> - Coeficient termic: 1.2 W/m(patrat)K; <br> 2 sau 3 randuri de garnituri;";
+    popup_specs.innerHTML = " - Clasa A, cu pereti exteriori de 3 mm; <br> - Coeficient termic: 1.2 W/m(patrat)K; <br> -  2 sau 3 randuri de garnituri;";
 });
 
 btn_400.addEventListener('click', () => {
